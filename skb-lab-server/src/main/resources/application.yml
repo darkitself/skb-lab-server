@@ -1,0 +1,4 @@
+scheduler:
+  messaging: "*/10 * * * * *"
+  mailing: "*/30 * * * * *"
+  saving: "*/10 * * * * *"

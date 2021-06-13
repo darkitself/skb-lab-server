@@ -44,7 +44,7 @@ public class MailSender {
      * Повторная отправка писем из очереди неотправленных
      */
     @SneakyThrows
-    @Scheduled(cron = "*/30 * * * * *")
+    @Scheduled(cron = "${scheduler.mailing}")
     private void resendMails() {
         log.info("Start to resending {} emails", notSentMail.size());
         List<Runnable> tasks = new LinkedList<>();

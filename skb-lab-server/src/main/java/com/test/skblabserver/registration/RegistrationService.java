@@ -65,7 +65,7 @@ public class RegistrationService {
      * Здесь же происходит уведомление пользователей о результате регистрации
      */
     @SneakyThrows
-    @Scheduled(cron = "*/10 * * * * *")
+    @Scheduled(cron = "${scheduler.saving}")
     private void saveVerifiedData() {
         log.info("Start processing verified data");
         for (var data : messageSender.getVerifiedData().entrySet()) {

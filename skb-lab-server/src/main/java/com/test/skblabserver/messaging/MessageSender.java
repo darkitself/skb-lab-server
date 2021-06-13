@@ -62,7 +62,7 @@ public class MessageSender {
      * Повторная отправка сообщений из очереди
      */
     @SneakyThrows
-    @Scheduled(cron = "*/10 * * * * *")
+    @Scheduled(cron = "${scheduler.messaging}")
     private void resendMessages() {
         log.info("Start to resending {} messages", notSentMessages.size());
         List<Runnable> tasks = new LinkedList<>();

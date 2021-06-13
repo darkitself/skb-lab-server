@@ -34,7 +34,7 @@ public class MailServiceStub implements MailService {
 
     @SneakyThrows
     private static void sleep() {
-        Thread.sleep(TimeUnit.SECONDS.toMillis(5));
+        Thread.sleep(TimeUnit.MINUTES.toMillis(1));
     }
 
     private static boolean shouldSleep() {
